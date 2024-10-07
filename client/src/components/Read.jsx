@@ -9,7 +9,7 @@ const Read = () => {
 
   async function getData() {
     try {
-      const response = await fetch("http://localhost:5000");
+      const response = await fetch("https://mern-crud-1-9hfo.onrender.com");
 
       if (!response.ok) {
         throw new Error("Network response was not ok");
@@ -26,9 +26,12 @@ const Read = () => {
 
   const handleDelete = async (id) => {
     try {
-      const response = await fetch(`http://localhost:5000/${id}`, {
-        method: "DELETE",
-      });
+      const response = await fetch(
+        `https://mern-crud-1-9hfo.onrender.com/${id}`,
+        {
+          method: "DELETE",
+        }
+      );
 
       if (!response.ok) {
         const result = await response.json();
